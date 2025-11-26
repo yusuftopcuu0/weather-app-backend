@@ -76,8 +76,7 @@ router.get("/", async (req, res) => {
     units = "metric",
     lang = "en",
   } = req.query as WeatherQuery;
-  const apiKey =
-    process.env.OPENWEATHER_API_KEY ?? "b14d97fef21832411597a8b566d936be";
+  const apiKey = process.env.WEATHER_API_KEY;
 
   if (!apiKey) {
     return res
